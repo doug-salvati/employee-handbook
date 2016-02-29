@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title> Select Your Union </title>
+
+	<link rel="stylesheet" type="text/css" href="../src/stylesheet.css">
+
+	<img class="logo" src="../files/img/logo.png">
+	<h1> Welcome to the UMass Lowell New Employee Handbook</h1>
+	<script> alert("Victoria: Select SEIU."); </script>
+	</head>
+
+	<body>
+		<p> Every new faculty member is assigned to a union. <br/>
+		Please indicate yours now. </br>
+		You can always change it if you make a mistake. </p>
+
+		<button onclick="setUnion('society_professors');"> The Massachusetts Society of Professors </button> <br/>
+		<button onclick="setUnion('teamsters');"> International Teamsters Union Local 25 </button> <br/>
+		<button onclick="setUnion('seiu');"> SEIU Local 888 </button> <br/>
+		<button onclick="setUnion('mta_classified');"> MTA Classified/Technical </button> <br/>
+		<button onclick="setUnion('mta_maintenance');"> MTA Maintenance/Trades </button> <br/>
+		<button onclick="setUnion('mta_grants');"> MTA Projects/Grants </button> <br/>
+		<button onclick="setUnion('uaw_grad');"> Local 1596 UAW </button> <br/>
+		<button onclick="setUnion('uaw_adjunct');"> Union of Adjunct Faculty, Local 1596, UAW] </button> <br/>
+		<button onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br/>
+
+		<script>
+		function setUnion(arg) {
+			localStorage.setItem("union", arg);
+			alert("Your union choice has been saved successfully. To change your selection anytime, click 'Change Union' on the top of the page.");
+			window.location = "../home.html";
+		}
+		</script>
+	</body>
+	
+	<footer>
+		<p> (c) 2016 Douglas Salvati </p>
+	</footer>
+</html>

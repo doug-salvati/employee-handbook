@@ -1,0 +1,9 @@
+/*************************************************** 
+ *	HR/Sustainability Project Style Sheet      *
+ ***************************************************/
+
+/* Scale the UMass logo to an appropriate size. */
+img.logo {
+	width: 10%;
+	height: auto;
+}
