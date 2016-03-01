@@ -69,6 +69,7 @@ body {
         color: #0F205A;
         font-family: Times New Roman, serif;
         font-size: 16px;
+        font-weight: bold;
         text-align: center;
         text-decoration: bold;
         display: inline-block;
@@ -86,9 +87,9 @@ body {
 /* Formats general block div class */
 .block_div {
         height: 340px;
-        width: 36%;
+        width: 35%;
         margin: 20px;
-        padding: 20px;
+        padding: 30px;
         background-color: #A7C1F8;
         border-color: #263960;
         border-style: double;
