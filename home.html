@@ -2,132 +2,153 @@
 <!-- HR/Sustainability Project Homepage -->
 <!---------------------------------------->
 
-<!---------------------------------------->
-<!-- I Can Edit! Yay!                   -->
-<!---------------------------------------->
-
 <!DOCTYPE html>
+
 <html>
 	<head>
-	<title> New Employee Handbook </title>
-	
-	<link rel="stylesheet" type="text/css" href="src/stylesheet.css">
+        	<title> New Employee Handbook </title>
+        	<link rel="stylesheet" type="text/css" href="src/stylesheet.css">
+         
+                <div id="logo_div" class="header_div">
+               	        <img class="logo" src="./files/img/logo.png"/>
+                </div>
 
-	<div>
-	<button onclick="changeUnion()"> Change Union </a> 
-	<button onclick="reset()"> Reset App </button>
-	<script> 
-	function reset() {
-		localStorage.removeItem("union");
-		location.reload();
-	}
-	function changeUnion() {
-		window.location = "./src/change_union_selection.html";
-	}	
-	</script>
-	</div>
+                <div id="title_div" class="header_div">
+                	<p id="title"> New Employee Handbook </p>
+                </div>
 
-	<img class="logo" src="./files/img/logo.png"/>
-	<h1> New Employee Handbook </h1>
-	
-	<script>
-	if (localStorage.getItem("union") === null) {
-		window.location = "./src/union_selection.html";
-	}
-	</script>
-
+        	<div id="button_div" class="header_div">
+                	<button class="header_button" onclick="changeUnion()"> Change Union </a> 
+                	<button class="header_button" onclick="reset()"> Reset App </button>
+                	<script> 
+                        	function reset() {
+                        		localStorage.removeItem("union");
+                        		location.reload();
+                        	}
+                        	function changeUnion() {
+                        		window.location = "./src/change_union_selection.html";
+                        	}	
+                	</script>
+        	</div>
+        	
+        	<script>
+                	if (localStorage.getItem("union") === null) {
+                		window.location = "./src/union_selection.html";
+                	}
+        	</script>
 	</head>
 
 	<body>
+
 		<ul>
-		<li> <h2> Group Insurance Commission </h2>
-	
-		<p> Here I will put a description and overview about what needs to be done, 
-		    and what the links will take the user to. </p>
+                        <div class="block_div left_div top_div">
+                		<li> 
+                                        <h2> Group Insurance Commission </h2>
+                        	
+                        		<p> Here I will put a description and overview about what needs to be done, 
+                        		    and what the links will take the user to. </p>
+                        
+                        		<a href="./files/gic/benefit_decision_guide.pdf"> [Guide]  </a>
+                        		<a href="./files/gic/enrollment_change_form.pdf"> [Enroll]  </a>
+                        		<a href="./files/gic/dependent_enrollment_change_form.pdf"> [Enroll (Dependents)] </a>
+                        		<a href="./src/life_insurance_beneficiary.html"> [Life Insurance Beneficiary] </a>
+                        		<a href="./files/gic/cobra/group_health_continuation.pdf"> [COBRA] </a>	
+                        
+                			<ul>
+                        			<li> 
+                                                        <h3> Flex Spending </h3>
+                        		
+                                			<p> Here I will put a description and overview about what needs to be done, 
+                                		    	    and what the links will take the user to. </p>
+                        			
+                                			<a href="./files/gic/flex_spending_handbook.pdf"> [Guide] </a>
+                                			<a href="./files/gic/flex_spending_enrollment.pdf"> [Enroll] </a>
+                        			</li>
+                			</ul>
+                                </li>
+                        </div>
 
-		<a href="./files/gic/benefit_decision_guide.pdf"> [Guide]  </a>
-		<a href="./files/gic/enrollment_change_form.pdf"> [Enroll]  </a>
-		<a href="./files/gic/dependent_enrollment_change_form.pdf"> [Enroll (Dependents)] </a>
-		<a href="./src/life_insurance_beneficiary.html"> [Life Insurance Beneficiary] </a>
-		<a href="./files/gic/cobra/group_health_continuation.pdf"> [COBRA] </a>	
+                        <div class="block_div right_div top_div">
+                		<li> 
+                                        <h2> Retirement </h2>
+                        		
+                        		<p> Here I will put a description and overview about what needs to be done, 
+                        		    and what the links will take the user to. </p>		
+                        
+                        		<a href="./files/retirement/msrb_benefit_guide.pdf"> [Guide]  </a>
+                        		<a href="./files/retirement/new_member_enrollment_form.pdf"> [Enroll] </a>
+                        		<a href="./files/retirement/orp_enrollment_guide.pdf"> [Optional Plan]  </a>	
+                		</li>
+                        </div>        	
 
-			<ul>
-			<li> <h3> Flex Spending </h3>
-		
-			<p> Here I will put a description and overview about what needs to be done, 
-		    	    and what the links will take the user to. </p>
-			
-			<a href="./files/gic/flex_spending_handbook.pdf"> [Guide] </a>
-			<a href="./files/gic/flex_spending_enrollment.pdf"> [Enroll] </a>
-			</li>
-			</ul>
+                        <div class="block_div left_div">
+                		<li> 
+                                        <h2> Labor Relations </h2>		
+                
+                        		<p> Here I will put a description and overview about what needs to be done, 
+                        		    and what the links will take the user to. </p>
+                        		
+                        		<a href="./src/union_redirects/collective_bargaining.html"> [Collective Bargaining Agreement] </a>
+                        		<a href="./src/union_redirects/memorandum.html"> [Memorandum] </a>
+                        		<a href="./src/union_redirects/dental.html"> [Dental] </a>
+                        		<a href="./src/union_redirects/vision.html"> [Vision] </a>
+                        		<a href="./src/union_redirects/more.html"> [Leadership & More] </a>
+                       		</li>
+                        </div>
 
-		<li> <h2> Retirement </h2>
-		
-		<p> Here I will put a description and overview about what needs to be done, 
-		    and what the links will take the user to. </p>		
+                        <div class="block_div right_div">        
+                		<li> 
+                                        <h2> Voluntary Savings </h2>
+                        
+                        		<p> Here I will put a description and overview about what needs to be done, 
+                        		    and what the links will take the user to. </p>
+                        
+                        		<a href="./files/voluntary_savings/summary_403b.pdf"> [403(b) Plan] </a>
+                        		<a href="./src/summary_457b_smart.html"> [457(b) SMART Plan] </a>
+                        		<a href="./files/voluntary_savings/comparison_403b_457b.pdf"> [Comparison] </a>				
+                		</li>
+                        </div>        
 
-		<a href="./files/retirement/msrb_benefit_guide.pdf"> [Guide]  </a>
-		<a href="./files/retirement/new_member_enrollment_form.pdf"> [Enroll] </a>
-		<a href="./files/retirement/orp_enrollment_guide.pdf"> [Optional Plan]  </a>	
-		</li>
-	
-		<li> <h2> Labor Relations </h2>		
+        		<!-- <li> <h2> Equal Employment Opportunity </h2> -->
+        
+        		<!-- <p> Here I will put a description and overview about what needs to be done, 
+        		    and what the links will take the user to. </p> -->		
+        		<!-- </li> -->
 
-		<p> Here I will put a description and overview about what needs to be done, 
-		    and what the links will take the user to. </p>
-		
-		<a href="./src/union_redirects/collective_bargaining.html"> [Collective Bargaining Agreement] </a>
-		<a href="./src/union_redirects/memorandum.html"> [Memorandum] </a>
-		<a href="./src/union_redirects/dental.html"> [Dental] </a>
-		<a href="./src/union_redirects/vision.html"> [Vision] </a>
-		<a href="./src/union_redirects/more.html"> [Leadership & More] </a>
-		</li>
-
-		<li> <h2> Voluntary Savings </h2>
-
-		<p> Here I will put a description and overview about what needs to be done, 
-		    and what the links will take the user to. </p>
-
-		<a href="./files/voluntary_savings/summary_403b.pdf"> [403(b) Plan] </a>
-		<a href="./src/summary_457b_smart.html"> [457(b) SMART Plan] </a>
-		<a href="./files/voluntary_savings/comparison_403b_457b.pdf"> [Comparison] </a>				
-		</li>
-
-		<!-- <li> <h2> Equal Employment Opportunity </h2> -->
-
-		<!-- <p> Here I will put a description and overview about what needs to be done, 
-		    and what the links will take the user to. </p> -->		
-		<!-- </li> -->
-
-		<li> <h2> Social Security </h2>
-
-		<p> Here I will put a description and overview about what needs to be done, 
-		    and what the links will take the user to. </p>
-
-		<a href="./files/ssa/form_1945.pdf"> [Statement] </a>
-		<a href="./files/ssa/windfall_elimination.pdf"> [Provision] </a>	
-		</li>
-
-		<li> <h2> Flyers & Promotions </h2>
-
-		<p> The following provide information, notes, handouts, and benefits on being part of the UMass Lowell Faculty.</p>		
-	
-		<a> [Live-In-Lowell Program & Rental/Homebuyer’s Incentive Reimbursement] </a>
-		<a href="./files/flyers/umass_extras.pdf"> [UMass Extras] </a>
-		<a> [UMass Lowell Alerts] </a>
-		<a> [Ally Space Program] </a>
-		<a> [MetLife] </a>
-		<a> [LifeScope] </a>
-		<a href="./files/flyers/tuition_remission_info.pdf"> [Tuition Remission Guide] </a> <a href="./files/flyers/tuition_remission_form.pdf"> [Tuition Remission Enrollment] </a>
-		<a href="./files/flyers/nondiscrimination_guidelines.pdf"> [Nondiscrimination] </a> <a href="./files/flyers/sexual_harassment_guidelines.pdf"> [Sexual Harassment] </a> <a href="./files/flyers/ada_guidelines.pdf"> [Disabilities] </a> <a href="./files/flyers/veterans_guidelines.pdf"> [Veterans] </a>
-		<a> [Diversity and Inclusion Training and Development] </a>
-		<a> [Fraud Policy] </a> <a> [Drug & Alcohol Policy] </a>
-		<a href="./files/flyers/dol/medical_leave.pdf"> [Medical Leave] </a>
-		<a href="./files/flyers/library.pdf"> [Library] </a>
-		<a href="./files/flyers/holidays.pdf"> [Holidays] </a>
-		<a> [Right To Know Law] </a>
-		</li>
+                        <div class="block_div left_div">        
+                		<li> 
+                                        <h2> Social Security </h2>
+                        
+                        		<p> Here I will put a description and overview about what needs to be done, 
+                        		    and what the links will take the user to. </p>
+                        
+                        		<a href="./files/ssa/form_1945.pdf"> [Statement] </a>
+                        		<a href="./files/ssa/windfall_elimination.pdf"> [Provision] </a>	
+                       		</li>
+                        </div>
+        
+                        <div class="block_div right_div">
+                		<li> 
+                                        <h2> Flyers & Promotions </h2>
+                        
+                        		<p> The following provide information, notes, handouts, and benefits on being part of the UMass Lowell Faculty.</p>		
+                        	
+                        		<a> [Live-In-Lowell Program & Rental/Homebuyer’s Incentive Reimbursement] </a>
+                        		<a href="./files/flyers/umass_extras.pdf"> [UMass Extras] </a>
+                        		<a> [UMass Lowell Alerts] </a>
+                        		<a> [Ally Space Program] </a>
+                        		<a> [MetLife] </a>
+                        		<a> [LifeScope] </a>
+                        		<a href="./files/flyers/tuition_remission_info.pdf"> [Tuition Remission Guide] </a> <a href="./files/flyers/tuition_remission_form.pdf"> [Tuition Remission Enrollment] </a>
+                        		<a href="./files/flyers/nondiscrimination_guidelines.pdf"> [Nondiscrimination] </a> <a href="./files/flyers/sexual_harassment_guidelines.pdf"> [Sexual Harassment] </a> <a href="./files/flyers/ada_guidelines.pdf"> [Disabilities] </a> <a href="./files/flyers/veterans_guidelines.pdf"> [Veterans] </a>
+                        		<a> [Diversity and Inclusion Training and Development] </a>
+                        		<a> [Fraud Policy] </a> <a> [Drug & Alcohol Policy] </a>
+                        		<a href="./files/flyers/dol/medical_leave.pdf"> [Medical Leave] </a>
+                        		<a href="./files/flyers/library.pdf"> [Library] </a>
+                        		<a href="./files/flyers/holidays.pdf"> [Holidays] </a>
+                        		<a> [Right To Know Law] </a>
+                		</li>
+                        </div>
 		</ul>
 	</body>
 
