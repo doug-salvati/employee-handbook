@@ -2,8 +2,115 @@
  *	HR/Sustainability Project Style Sheet      *
  ***************************************************/
 
-/* Scale the UMass logo to an appropriate size. */
-img.logo {
-	width: 10%;
-	height: auto;
+/* Formats background color of page */
+body {
+        background-color: #DEE2F0;
+        font-family: Times New Roman, serif;
 }
+
+/* Formats header div class */
+.header_div {
+        height: 170px;
+        margin-top: -20px;
+        background-color: #0F205A;
+        z-index: 1;     
+        position: fixed;
+}
+
+/* Formats umass logo div id */
+#logo_div {
+        width: 11.7%;
+        min-width: 120px;
+        margin-left: -0.75%;
+}
+
+/* Formats umass logo class */
+.logo {
+	height: 130px;
+	width: 80%;
+        min-width: 80px;
+        margin-top: 20px;
+        margin-left: 20px;
+}
+
+/* Formats title div id */
+#title_div {
+        width: 70%;
+        min-width: 700px;
+        margin-left: 10.95%;
+}
+
+/* Formats main page title id */
+#title {
+        margin-top: 52.5px;
+        padding-left: 30px;
+        color: #DEE2F0;
+        font-size: 52px;        
+        font-family: Times New Roman, serif;
+}
+
+/* Formats buttons div id */
+#button_div {
+        height: 145px;
+        width: 21%;
+        min-width: 200px;
+        margin-left: 80%;
+        padding-top: 25px;
+}
+
+/* Formats header button class */
+.header_button {
+        height: 40px;
+        width: 60%;
+        float: right;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 20%;
+        color: #0F205A;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: bold;
+        display: inline-block;
+        border-radius: 5px;
+        /* Start of code taken from http://www.colorzilla.com/gradient-editor/ 
+           to make a nice color gradient got the buttons */
+        background: #dee2f0;
+        background: -moz-linear-gradient(top,  #dee2f0 43%, #9bbaf7 100%, #263960 100%);
+        background: -webkit-linear-gradient(top,  #dee2f0 43%,#9bbaf7 100%,#263960 100%);
+        background: linear-gradient(to bottom,  #dee2f0 43%,#9bbaf7 100%,#263960 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee2f0', endColorstr='#263960',GradientType=0 );
+        /* End of code taken from http://www.colorzilla.com/gradient-editor/ */
+}
+
+/* Formats general block div class */
+.block_div {
+        height: 340px;
+        width: 36%;
+        margin: 20px;
+        padding: 20px;
+        background-color: #A7C1F8;
+        border-color: #263960;
+        border-style: double;
+        border-width: 20px;
+}
+
+/* Formats top div class */
+.top_div {
+        margin-top: 200px;
+}
+
+/* Formats left div class */
+.left_div {
+        float: left;
+        margin-left: 5%;
+}
+
+/* Formats right div class */
+.right_div {
+        float: right;
+        margin-right: 5%;
+}
+
+
+
