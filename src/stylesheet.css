@@ -5,7 +5,6 @@
 /* Formats background color of page */
 body {
         background-color: #DEE2F0;
-        font-family: Times New Roman, serif;
 }
 
 /* Formats header div class */
@@ -68,6 +67,7 @@ body {
         margin-left: 10px;
         margin-right: 20%;
         color: #0F205A;
+        font-family: Times New Roman, serif;
         font-size: 16px;
         text-align: center;
         text-decoration: bold;
