@@ -85,7 +85,7 @@ body {
 
 /* Formats general block div class */
 .block_div {
-        height: 340px;
+        /*height: 340px;*/
         width: 35%;
         margin: 20px;
         padding: 30px;
@@ -109,14 +109,14 @@ body {
 /* Formats right div class */
 .right_div {
         float: right;
-        margin-right: 5%;
+        margin-right: 5%
 }
 
 /* Formats block text class */
 .block_text {
         color: black;
         font-family: Times New Roman, serif;
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
 }
 
@@ -132,5 +132,29 @@ body {
         font-weight: bold;
 }
 
+.link {
+        width: 300px;
+        padding:10px;
+        border-radius: 5px;
+        border: 2px;
+        display: block;
+        margin: 0 auto;
 
+        /* Start of code taken from http://www.colorzilla.com/gradient-editor/ 
+           to make a nice color gradient got the buttons */
+        background: rgb(161,164,244); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(161,164,244,1) 0%, rgba(87,112,165,1) 41%, rgba(38,57,96,1) 73%, rgba(15,32,90,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(161,164,244,1) 0%,rgba(87,112,165,1) 41%,rgba(38,57,96,1) 73%,rgba(15,32,90,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(161,164,244,1) 0%,rgba(87,112,165,1) 41%,rgba(38,57,96,1) 73%,rgba(15,32,90,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1a4f4', endColorstr='#0f205a',GradientType=0 ); /* IE6-9 */
+        /* End of code taken from http://www.colorzilla.com/gradient-editor/ */
+}
 
+a {
+        text-decoration: none;
+        text-align: center;
+        color: #DEE2F0;
+        font-family: Times New Roman, serif;
+        font-size: 16px;
+        font-weight: bold;
+}
