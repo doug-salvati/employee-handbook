@@ -71,7 +71,6 @@ body {
         font-size: 16px;
         font-weight: bold;
         text-align: center;
-        text-decoration: bold;
         display: inline-block;
         border-radius: 5px;
         /* Start of code taken from http://www.colorzilla.com/gradient-editor/ 
@@ -111,6 +110,26 @@ body {
 .right_div {
         float: right;
         margin-right: 5%;
+}
+
+/* Formats block text class */
+.block_text {
+        color: black;
+        font-family: Times New Roman, serif;
+        font-size: 14px;
+        text-align: center;
+}
+
+/* Formats block title class */
+.block_title {
+        font-size: 28px;
+        font-weight: bold;
+}
+
+/* Formats block subtitle class */
+.block_subtitle {
+        font-size: 20px;
+        font-weight: bold;
 }
 
 
