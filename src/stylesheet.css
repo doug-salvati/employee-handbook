@@ -158,3 +158,19 @@ a {
         font-size: 16px;
         font-weight: bold;
 }
+
+/* Copyright locked to bottom */ 
+footer div {
+    margin-left: -10px;
+    background-color: #0F205A;
+    position: fixed;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer div p, div h1 {
+    padding-left: 1em;
+    font-family: Times New Roman, serif;
+    color: white;
+}

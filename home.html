@@ -20,12 +20,20 @@
 
                 <div id="button_div" class="header_div">
                         <button class="header_button" onclick="changeUnion()"> Change Union </a> 
-                        <button class="header_button" onclick="reset()"> Reset App </button>
+                        <button class="header_button" id="credit_button" onclick="showCredit()"> About </button>
                         <script> 
-                                function reset() {
-                                        localStorage.removeItem("union");
-                                        location.reload();
-                                }
+                                function showCredit() {
+                                        if (document.getElementById('credit').style.display === "none") {
+				                document.getElementById('credit').style.display = "block";
+				                document.getElementById('credit_button').innerHTML = "Cancel";
+				        }
+				        else {
+				                document.getElementById('credit').style.display = "none";
+                                                document.getElementById('credit_button').innerHTML = "About";
+				        }
+				}
+				
+                                
                                 function changeUnion() {
                                         window.location = "./src/change_union_selection.html";
                                 }       
@@ -40,7 +48,6 @@
         </head>
 
         <body>
-
                 <div class="block_div left_div top_div">
                         <h2 class="block_text block_title"> Group Insurance Commission </h2>
                 
@@ -139,8 +146,12 @@
                 </div>
         </body>
 
-        <footer>
-                <p> (c) 2016 Douglas Salvati </p>
+        <footer id="credit" style="display:none">
+                <div>
+		        <p> <h1> <strong> Credits </strong> </h1> </p>
+		        <p> <strong> &#xa9 2016 Douglas Salvati. Style by Victoria Albanese. </strong> </p>
+			<p> <em> UMass Lowell New Employee Handbook </em> | <em> Version 0 </em> </p>
+		</div>
         </footer>
 </html>
 
