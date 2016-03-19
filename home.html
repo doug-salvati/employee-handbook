@@ -1,4 +1,3 @@
-
 <!---------------------------------------->
 <!-- HR/Sustainability Project Homepage -->
 <!---------------------------------------->
@@ -6,152 +5,159 @@
 <!DOCTYPE html>
 
 <html>
-        <head>
-                <title> New Employee Handbook </title>
-                <link rel="stylesheet" type="text/css" href="src/stylesheet.css">
-         
-                <div id="logo_div" class="header_div">
-                        <img class="logo" src="./files/img/logo.png"/>
-                </div>
+<head>
+    <link rel="icon" type="image/x-icon" href="./files/img/favicon.ico" />
+    <title> New Employee Handbook </title>
+    <link rel="stylesheet" type="text/css" href="src/stylesheet.css">
 
-                <div id="title_div" class="header_div">
-                        <p id="title"> New Employee Handbook </p>
-                </div>
+    <div id="logo_div" class="header_div">
+        <img class="logo" src="./files/img/logo.png" />
+    </div>
+    <div id="title_div" class="header_div">
+        <p id="title"> New Employee Handbook </p>
+    </div>
+    <div id="button_div" class="header_div">
+        <button class="header_button" onclick="changeUnion()"> Change Union </button>
+        <button class="header_button" id="credit_button" onclick="showCredit()"> About </button>
+        <script>
+            function showCredit() {
+                if (document.getElementById('credit').style.display === "none") {
+                    document.getElementById('credit').style.display = "block";
+                    document.getElementById('credit_button').innerHTML = "Cancel";
+                }
+                else {
+                    document.getElementById('credit').style.display = "none";
+                    document.getElementById('credit_button').innerHTML = "About";
+                }
+            }
 
-                <div id="button_div" class="header_div">
-                        <button class="header_button" onclick="changeUnion()"> Change Union </a> 
-                        <button class="header_button" id="credit_button" onclick="showCredit()"> About </button>
-                        <script> 
-                                function showCredit() {
-                                        if (document.getElementById('credit').style.display === "none") {
-				                document.getElementById('credit').style.display = "block";
-				                document.getElementById('credit_button').innerHTML = "Cancel";
-				        }
-				        else {
-				                document.getElementById('credit').style.display = "none";
-                                                document.getElementById('credit_button').innerHTML = "About";
-				        }
-				}
-				
-                                
-                                function changeUnion() {
-                                        window.location = "./src/change_union_selection.html";
-                                }       
-                        </script>
-                </div>
-                
-                <script>
-                        if (localStorage.getItem("union") === null) {
-                                window.location = "./src/union_selection.html";
-                        }
-                </script>
-        </head>
+            function changeUnion() {
+                window.location = "./src/change_union_selection.html";
+            }
 
-        <body>
-                <div class="block_div left_div top_div">
-                        <h2 class="block_text block_title"> Group Insurance Commission </h2>
-                
-                        <p class="block_text"> Here I will put a description and overview about what needs to be done, 
-                            and what the links will take the user to. </p>
-        
-                        <button class="link"><a href="./files/gic/benefit_decision_guide.pdf"> [Guide]  </a></button><br/>
-                        <button class="link"><a href="./files/gic/enrollment_change_form.pdf"> [Enroll]  </a></button><br/>
-                        <button class="link"><a href="./files/gic/dependent_enrollment_change_form.pdf"> [Enroll (Dependents)] </a></button><br/>
-                        <button class="link"><a href="./src/life_insurance_beneficiary.html"> [Life Insurance Beneficiary] </a></button><br/>
-                        <button class="link"><a href="./files/gic/cobra/group_health_continuation.pdf"> [COBRA] </a></button><br/>
-        
-                        <h3 class="block_text block_subtitle"> Flex Spending </h3>
-                
-                        <p class="block_text"> Here I will put a description and overview about what needs to be done, 
-                            and what the links will take the user to. </p>
-                        
-                        <button class="link"><a href="./files/gic/flex_spending_handbook.pdf"> [Guide] </a></button><br/>
-                        <button class="link"><a href="./files/gic/flex_spending_enrollment.pdf"> [Enroll] </a></button><br/>
-                </div>
+            function viewPDF(document) {
+                document = "../" + document;
+                localStorage.setItem("pdf", document);
+                window.location = "./src/pdf_viewer.html";
+            }
+        </script>
+    </div>
 
-                <div class="block_div right_div top_div">
-                        <h2 class="block_text block_title"> Labor Relations </h2>              
-        
-                        <p class="block_text"> Here I will put a description and overview about what needs to be done, 
-                            and what the links will take the user to. </p>
-                                
-                        <button class="link"><a href="./src/union_redirects/collective_bargaining.html"> [Collective Bargaining Agreement] </a></button><br/>
-                        <button class="link"><a href="./src/union_redirects/memorandum.html"> [Memorandum] </a></button><br/>
-                        <button class="link"><a href="./src/union_redirects/dental.html"> [Dental] </a></button><br/>
-                        <button class="link"><a href="./src/union_redirects/vision.html"> [Vision] </a></button><br/>
-                        <button class="link"><a href="./src/union_redirects/more.html"> [Leadership & More] </a></button><br/>
-                </div>
+    <script>
+        if (localStorage.getItem("union") === null) {
+            window.location = "./src/union_selection.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="block_div left_div top_div">
+        <h2 class="block_text block_title"> Group Insurance Commission </h2>
 
-                <div class="block_div right_div">
-                        <h2 class="block_text block_title"> Flyers & Promotions </h2>
-                
-                        <p class="block_text"> The following provide information, notes, handouts, and benefits on being part of the UMass Lowell Faculty.</p>             
-                        <button class="link"><a> [Live-In-Lowell Program and Rental/Homebuyer's Incentive Reimbursement] </a></button><br/>
-                        <button class="link"><a href="./files/flyers/umass_extras.pdf"> [UMass Extras] </a></button><br/>
-                        <button class="link"><a> [UMass Lowell Alerts] </a></button><br/>
-                        <button class="link"><a> [Ally Space Program] </a></button><br/>
-                        <button class="link"><a> [MetLife] </a></button><br/>
-                        <button class="link"><a> [LifeScope] </a></button><br/>
-                        <button class="link"><a href="./files/flyers/tuition_remission_info.pdf"> [Tuition Remission Guide] </a></button><br/> 
-                        <button class="link"><a href="./files/flyers/tuition_remission_form.pdf"> [Tuition Remission Enrollment] </a></button><br/>
-                        <button class="link"><a href="./files/flyers/nondiscrimination_guidelines.pdf"> [Nondiscrimination] </a> </button><br/>
-                        <button class="link"><a href="./files/flyers/sexual_harassment_guidelines.pdf"> [Sexual Harassment] </a> </button><br/>
-                        <button class="link"><a href="./files/flyers/ada_guidelines.pdf"> [Disabilities] </a> </button><br/>
-                        <button class="link"><a href="./files/flyers/veterans_guidelines.pdf"> [Veterans] </a></button><br/>
-                        <button class="link"><a> [Diversity and Inclusion Training and Development] </a></button><br/>
-                        <button class="link"><a> [Fraud Policy] </a> </button><br/>
-                        <button class="link"><a> [Drug and Alcohol Policy] </a></button><br/>
-                        <button class="link"><a href="./files/flyers/dol/medical_leave.pdf"> [Medical Leave] </a></button><br/>
-                        <button class="link"><a href="./files/flyers/library.pdf"> [Library] </a></button><br/>
-                        <button class="link"><a href="./files/flyers/holidays.pdf"> [Holidays] </a></button><br/>
-                        <button class="link"><a> [Right To Know Law] </a></button><br/>
-                </div>
+        <p class="block_text">
+            Here I will put a description and overview about what needs to be done,
+            and what the links will take the user to.
+        </p>
 
-                <div class="block_div left_div">
-                        <h2 class="block_text block_title"> Retirement </h2>
-                                
-                        <p class="block_text"> Here I will put a description and overview about what needs to be done, 
-                            and what the links will take the user to. </p>              
-                
-                        <button class="link"><a href="./files/retirement/msrb_benefit_guide.pdf"> [Guide]  </a></button><br/>
-                        <button class="link"><a href="./files/retirement/new_member_enrollment_form.pdf"> [Enroll] </a></button><br/>
-                        <button class="link"><a href="./files/retirement/orp_enrollment_guide.pdf"> [Optional Plan]  </a></button><br/>    
-                </div>          
+        <button class="link" onclick="viewPDF('./files/gic/benefit_decision_guide.pdf')"> Guide </button><br />
+        <button class="link" onclick="viewPDF('./files/gic/enrollment_change_form.pdf')"> Enroll </button><br />
+        <button class="link" onclick="viewPDF('./files/gic/dependent_enrollment_change_form.pdf')"> Enroll (Dependents) </button><br />
+        <button class="link" onclick="window.location = './src/life_insurance_beneficiary.html'"> Life Insurance Beneficiary </button><br />
+        <button class="link" onclick="viewPDF('./files/gic/cobra/group_health_continuation.pdf')"> COBRA </button><br />
 
-                <div class="block_div left_div">        
-                        <h2 class="block_text block_title"> Voluntary Savings </h2>
-        
-                        <p class="block_text"> Here I will put a description and overview about what needs to be done, 
-                            and what the links will take the user to. </p>
-                
-                        <button class="link"><a href="./files/voluntary_savings/summary_403b.pdf"> [403(b) Plan] </a></button><br/>
-                        <button class="link"><a href="./src/summary_457b_smart.html"> [457(b) SMART Plan] </a></button><br/>
-                        <button class="link"><a href="./files/voluntary_savings/comparison_403b_457b.pdf"> [Comparison] </a></button><br/>
-                </div>        
+        <h3 class="block_text block_subtitle"> Flex Spending </h3>
 
-                <!-- <li> <h2> Equal Employment Opportunity </h2> -->
+        <p class="block_text">
+            Here I will put a description and overview about what needs to be done,
+            and what the links will take the user to.
+        </p>
 
-                <!-- <p> Here I will put a description and overview about what needs to be done, 
-                    and what the links will take the user to. </p> -->          
-                <!-- </li> -->
+        <button class="link" onclick="viewPDF('./files/gic/flex_spending_handbook.pdf')"> Guide </button><br />
+        <button class="link" onclick="viewPDF('./files/gic/flex_spending_enrollment.pdf')"> Enroll </button><br />
+    </div>
+    <div class="block_div right_div top_div">
+        <h2 class="block_text block_title"> Labor Relations </h2>
 
-                <div class="block_div left_div">        
-                        <h2 class="block_text block_title"> Social Security </h2>
-                
-                        <p class="block_text"> Here I will put a description and overview about what needs to be done, 
-                            and what the links will take the user to. </p>
-                
-                        <button class="link"><a href="./files/ssa/form_1945.pdf"> [Statement] </a></button><br/>
-                        <button class="link"><a href="./files/ssa/windfall_elimination.pdf"> [Provision] </a></button><br/>
-                </div>
-        </body>
+        <p class="block_text">
+            Here I will put a description and overview about what needs to be done,
+            and what the links will take the user to.
+        </p>
 
+        <button class="link" onclick="viewPDF('./src/union_redirects/collective_bargaining.html')"> Collective Bargaining Agreement </button><br />
+        <button class="link" onclick="viewPDF('./src/union_redirects/memorandum.html')"> Memorandum </button><br />
+        <button class="link" onclick="window.location = './src/union_redirects/dental.html'"> *Dental </button><br />
+        <button class="link" onclick="window.location = './src/union_redirects/vision.html'"> *Vision </button><br />
+        <button class="link" onclick="window.location = './src/union_redirects/more.html'"> *Leadership & More </button><br />
+    </div>
+    <div class="block_div right_div">
+        <h2 class="block_text block_title"> Flyers & Promotions </h2>
+
+        <p class="block_text"> The following provide information, notes, handouts, and benefits on being part of the UMass Lowell Faculty.</p>
+        <button class="link" onclick="viewPDF('./files/flyers/live_in_lowell.pdf')"> Live in Lowell </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/umass_extras.pdf')"> UMass Extras </button><br />
+        <button class="link" onclick="window.location = './src/alerts.html'"> University Alerts </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/ally_space.pdf')"> Ally Space Program </button><br />
+        <button class="link" onclick="window.location = './src/metlife.html'"> Metlife Insurance </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/assistance.pdf')"> Employee Assistance </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/tuition_remission_info.pdf')"> Tuition Remission Guide </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/tuition_remission_form.pdf')"> Tuition Remission Enrollment </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/nondiscrimination_guidelines.pdf')"> Nondiscrimination </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/sexual_harassment_guidelines.pdf')"> Sexual Harassment </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/ada_guidelines.pdf')"> Disabilities </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/veterans_guidelines.pdf')"> Veterans </button><br />
+        <button class="link" onclick="window.location = './src/dead_end.html'"> *Training and Development </button><br />
+        <button class="link" onclick="window.location = './src/dead_end.html'"> *Fraud Policy </button><br />
+        <button class="link" onclick="window.location = './src/dead_end.html'"> *Drug and Alcohol Policy </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/dol/medical_leave.pdf')"> Medical Leave </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/library.pdf')"> Library </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/holidays.pdf')"> Holidays </button><br />
+        <button class="link" onclick="window.location = './src/dead_end.html'"> *Right To Know Law </button><br />
+    </div>
+    <div class="block_div left_div">
+        <h2 class="block_text block_title"> Retirement </h2>
+
+        <p class="block_text">
+            Here I will put a description and overview about what needs to be done,
+            and what the links will take the user to.
+        </p>
+
+        <button class="link" onclick="viewPDF('./files/retirement/msrb_benefit_guide.pdf')"> Guide </button><br />
+        <button class="link" onclick="viewPDF('./files/retirement/new_member_enrollment_form.pdf')"> Enroll </button><br />
+        <button class="link" onclick="viewPDF('./files/retirement/orp_enrollment_guide.pdf')"> Optional Plan </button><br />
+    </div>
+    <div class="block_div left_div">
+        <h2 class="block_text block_title"> Voluntary Savings </h2>
+
+        <p class="block_text">
+            Here I will put a description and overview about what needs to be done,
+            and what the links will take the user to.
+        </p>
+
+        <button class="link" onclick="viewPDF('./files/voluntary_savings/summary_403b.pdf')"> 403(b) Plan </button><br />
+        <button class="link" onclick="viewPDF('./src/summary_457b_smart.html')"> 457(b) SMART Plan </button><br />
+        <button class="link" onclick="viewPDF('./files/voluntary_savings/comparison_403b_457b.pdf')"> Comparison </button><br />
+    </div>
+    <!-- <li> <h2> Equal Employment Opportunity </h2> -->
+    <!-- <p> Here I will put a description and overview about what needs to be done,
+        and what the links will take the user to. </p> -->
+    <!-- </li> -->
+    <div class="block_div left_div">
+        <h2 class="block_text block_title"> Social Security </h2>
+
+        <p class="block_text">
+            Here I will put a description and overview about what needs to be done,
+            and what the links will take the user to.
+        </p>
+
+        <button class="link" onclick="viewPDF('./files/ssa/form_1945.pdf')"> Statement </button><br />
+        <button class="link" onclick="viewPDF('./files/ssa/windfall_elimination.pdf')"> Provision </button><br />
+    </div>
+</body>
+</html>
         <footer id="credit" style="display:none">
                 <div>
 		        <p> <h1> <strong> Credits </strong> </h1> </p>
 		        <p> <strong> &#xa9 2016 Douglas Salvati. Style by Victoria Albanese. </strong> </p>
-			<p> <em> UMass Lowell New Employee Handbook </em> | <em> Version 0 </em> </p>
+			    <p> <em> UMass Lowell New Employee Handbook </em> | <em> Version 0 </em> </p>
+                <p> * indicates page not fully implemented yet. </p>
 		</div>
         </footer>
-</html>
-
