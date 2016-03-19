@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+        <link rel="icon" type="image/x-icon" href="../files/img/favicon.ico" />
         	<title> PDF </title>
         	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<script type="text/javascript">
@@ -15,6 +16,8 @@
 				copy = elem.cloneNode(true);
 				copy.setAttribute('src', localStorage.pdf);
 				elem.parentNode.replaceChild(copy, elem);
+                
+				localStorage.removeItem("pdf");
 			}	
 
 			window.onload = setElems;		
@@ -32,7 +35,7 @@
                 	</div>
 
  	                <div id="title_div" class="header_div">
-        	        	<p id="title"> PDF Viewer </p>
+        	        	<p id="title"> New Employee Handbook </p>
                	 	</div>
 
 	        	<div id="button_div" class="header_div">

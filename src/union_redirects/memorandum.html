@@ -7,8 +7,11 @@
 	
 	}
 	else {
-		window.location = "../../files/unions/" + localStorage.union + "/memorandum.pdf";
+	    var doc_name = "../files/unions/" + localStorage.union + "/memorandum.pdf";
+	    localStorage.setItem("pdf", doc_name);
+	    window.location = "../pdf_viewer.html";
 	}
 	</script>
 </head>
+<body></body>
 </html>
