@@ -169,16 +169,18 @@ body {
 
 /* Copyright locked to bottom */ 
 footer div {
-    margin-left: -10px;
-    background-color: #0F205A;
-    position: fixed;
-    padding: 0;
-    bottom: 0;
-    width: 100%;
+        margin-left: -10px;
+        background-color: #0F205A;
+        position: fixed;
+        padding: 0;
+        bottom: 0;
+        width: 120%;
+
+        box-shadow: 0px -5px 10px black;
 }
 
 footer div p, div h1 {
-    padding-left: 1em;
-    font-family: Arial, sans-serif;
-    color: white;
+        padding-left: 1em;
+        font-family: Arial, sans-serif;
+        color: white;
 }
