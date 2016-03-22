@@ -3,32 +3,68 @@
 	<head>
 	<title> Select Your Union </title>
 
-	<link rel="stylesheet" type="text/css" href="../src/stylesheet.css">
+        <link rel="icon" type="image/x-icon" href="../files/img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script type="text/javascript">
+			function setElems() {
+				var elem = document.getElementById("doca");
+				var copy = elem.cloneNode(true);
+				copy.setAttribute('data', localStorage.pdf);
+				elem.parentNode.replaceChild(copy, elem);
 
-	<img class="logo" src="../files/img/logo.png">
-	<h1> New Employee Handbook > Union Selection </h1>
+				elem = document.getElementById("docb");
+				copy = elem.cloneNode(true);
+				copy.setAttribute('src', localStorage.pdf);
+				elem.parentNode.replaceChild(copy, elem);
+
+				localStorage.removeItem("pdf");
+			}
+
+			window.onload = setElems;
+
+			function changeUnion() {
+                       		window.location = "change_union_selection.html";
+			}
+        </script>
 	</head>
 
 	<body>
-		<p> Please enter your union now. </p>		
+        <div class="header_cheat" style="top: -5px">
+            <div style="width:100%">
+                <div id="logo_div" class="header_div">
+                    <a href="../home.html"><img class="logo" src="../files/img/back.png" /></a>
+                </div>
 
-		<button onclick="setUnion('society_professors');"> The Massachusetts Society of Professors </button> <br/>
-		<button onclick="setUnion('teamsters');"> International Teamsters Union Local 25 </button> <br/>
-		<button onclick="setUnion('seiu');"> SEIU Local 888 </button> <br/>
-		<button onclick="setUnion('mta_classified');"> MTA Classified/Technical </button> <br/>
-		<button onclick="setUnion('mta_maintenance');"> MTA Maintenance/Trades </button> <br/>
-		<button onclick="setUnion('mta_grants');"> MTA Projects/Grants </button> <br/>
-		<button onclick="setUnion('uaw_grad');"> Local 1596 UAW </button> <br/>
-		<button onclick="setUnion('uaw_adjunct');"> Union of Adjunct Faculty, Local 1596, UAW] </button> <br/>
-		<button onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br/>
+                <div id="title_div" class="header_div">
+                    <p id="title"> Select your Union </p>
+                </div>
 
+                <div id="button_div" class="header_div">
+                    <button class="header_button" onclick="changeUnion()"> Change Union </button>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute; top:155px;">
+            <p> Please enter your union now. </p>
+
+            <button onclick="setUnion('society_professors');"> The Massachusetts Society of Professors </button> <br />
+            <button onclick="setUnion('teamsters');"> International Teamsters Union Local 25 </button> <br />
+            <button onclick="setUnion('seiu');"> SEIU Local 888 </button> <br />
+            <button onclick="setUnion('mta_classified');"> MTA Classified/Technical </button> <br />
+            <button onclick="setUnion('mta_maintenance');"> MTA Maintenance/Trades </button> <br />
+            <button onclick="setUnion('mta_grants');"> MTA Projects/Grants </button> <br />
+            <button onclick="setUnion('uaw_grad');"> Local 1596 UAW </button> <br />
+            <button onclick="setUnion('uaw_adjunct');"> Union of Adjunct Faculty, Local 1596, UAW] </button> <br />
+            <button onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br />
+        </div>
 		<script>
 		function setUnion(arg) {
 			localStorage.setItem("union", arg);
 			alert("Your union choice has been saved successfully. To change your selection anytime, click 'Change Union' on the top of the page.");
 			window.location = "../home.html";
 		}
-		</script>
+        </script>
 
 	</body>
 

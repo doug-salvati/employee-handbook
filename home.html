@@ -10,37 +10,39 @@
     <title> New Employee Handbook </title>
     <link rel="stylesheet" type="text/css" href="src/stylesheet.css">
 
-    <div id="logo_div" class="header_div">
-        <img class="logo" src="./files/img/logo.png" />
-    </div>
-    <div id="title_div" class="header_div">
-        <p id="title"> New Employee Handbook </p>
-    </div>
-    <div id="button_div" class="header_div">
-        <button class="header_button" onclick="changeUnion()"> Change Union </button>
-        <button class="header_button" id="credit_button" onclick="showCredit()"> About </button>
-        <script>
-            function showCredit() {
-                if (document.getElementById('credit').style.display === "none") {
-                    document.getElementById('credit').style.display = "block";
-                    document.getElementById('credit_button').innerHTML = "Cancel";
+    <div class="header_cheat">
+        <div id="logo_div" class="header_div">
+            <img class="logo" src="./files/img/logo.png" />
+        </div>
+        <div id="title_div" class="header_div">
+            <p id="title"> New Employee Handbook </p>
+        </div>
+        <div id="button_div" class="header_div">
+            <button class="header_button" onclick="changeUnion()"> Change Union </button>
+            <button class="header_button" id="credit_button" onclick="showCredit()"> About </button>
+            <script>
+                function showCredit() {
+                    if (document.getElementById('credit').style.display === "none") {
+                        document.getElementById('credit').style.display = "block";
+                        document.getElementById('credit_button').innerHTML = "Cancel";
+                    }
+                    else {
+                        document.getElementById('credit').style.display = "none";
+                        document.getElementById('credit_button').innerHTML = "About";
+                    }
                 }
-                else {
-                    document.getElementById('credit').style.display = "none";
-                    document.getElementById('credit_button').innerHTML = "About";
+
+                function changeUnion() {
+                    window.location = "./src/change_union_selection.html";
                 }
-            }
 
-            function changeUnion() {
-                window.location = "./src/change_union_selection.html";
-            }
-
-            function viewPDF(document) {
-                document = "../" + document;
-                localStorage.setItem("pdf", document);
-                window.location = "./src/pdf_viewer.html";
-            }
-        </script>
+                function viewPDF(document) {
+                    document = "../" + document;
+                    localStorage.setItem("pdf", document);
+                    window.location = "./src/pdf_viewer.html";
+                }
+            </script>
+        </div>
     </div>
 
     <script>
@@ -82,8 +84,8 @@
             and what the links will take the user to.
         </p>
 
-        <button class="link" onclick="viewPDF('./src/union_redirects/collective_bargaining.html')"> Collective Bargaining Agreement </button><br />
-        <button class="link" onclick="viewPDF('./src/union_redirects/memorandum.html')"> Memorandum </button><br />
+        <button class="link" onclick="window.location = './src/union_redirects/collective_bargaining.html'"> Collective Bargaining Agreement </button><br />
+        <button class="link" onclick="window.location = './src/union_redirects/memorandum.html'"> Memorandum </button><br />
         <button class="link" onclick="window.location = './src/union_redirects/dental.html'"> *Dental </button><br />
         <button class="link" onclick="window.location = './src/union_redirects/vision.html'"> *Vision </button><br />
         <button class="link" onclick="window.location = './src/union_redirects/more.html'"> *Leadership & More </button><br />
