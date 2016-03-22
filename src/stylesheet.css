@@ -4,7 +4,18 @@
 
 /* Formats background color of page */
 body {
-        background-color: #DEE2F0;
+        background-color: #A7C1F8; /*#DEE2F0;*/
+}
+
+/* Puts the whole header in a div with a bottom shadow */
+.header_cheat {
+        box-shadow: 0px 5px 10px black;
+        width: 120%;
+        height: 150px;
+        margin-left: -10px;
+        padding-top: 10px;
+        z-index: 1;
+        position: fixed;
 }
 
 /* Formats header div class */
@@ -43,9 +54,9 @@ body {
 #title {
         margin-top: 52.5px;
         padding-left: 30px;
-        color: #DEE2F0;
+        color: white;
         font-size: 52px;        
-        font-family: Times New Roman, serif;
+        font-family: Arial, sans-serif;
 }
 
 /* Formats buttons div id */
@@ -67,7 +78,7 @@ body {
         margin-left: 10px;
         margin-right: 20%;
         color: #0F205A;
-        font-family: Times New Roman, serif;
+        font-family: Arial, sans-serif;
         font-size: 16px;
         font-weight: bold;
         text-align: center;
@@ -89,10 +100,8 @@ body {
         width: 35%;
         margin: 20px;
         padding: 30px;
-        background-color: #A7C1F8;
-        border-color: #263960;
-        border-style: double;
-        border-width: 20px;
+        background-color: white;
+        box-shadow: 5px 5px 10px #888888;
 }
 
 /* Formats top div class */
@@ -103,19 +112,20 @@ body {
 /* Formats left div class */
 .left_div {
         float: left;
-        margin-left: 5%;
+        margin-left: 8%;
 }
 
 /* Formats right div class */
 .right_div {
         float: right;
-        margin-right: 5%
+        margin-right: 8%
 }
 
 /* Formats block text class */
 .block_text {
-        color: black;
-        font-family: Times New Roman, serif;
+        /*color: black;*/
+        color: #0F205A;
+        font-family: Arial, sans-serif;
         font-size: 16px;
         text-align: center;
 }
@@ -140,6 +150,13 @@ body {
         display: block;
         margin: 0 auto;
 
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+
         /* Start of code taken from http://www.colorzilla.com/gradient-editor/ 
            to make a nice color gradient got the buttons */
         background: rgb(161,164,244); /* Old browsers */
@@ -148,15 +165,6 @@ body {
         background: linear-gradient(to bottom,  rgba(161,164,244,1) 0%,rgba(87,112,165,1) 41%,rgba(38,57,96,1) 73%,rgba(15,32,90,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1a4f4', endColorstr='#0f205a',GradientType=0 ); /* IE6-9 */
         /* End of code taken from http://www.colorzilla.com/gradient-editor/ */
-}
-
-a {
-        text-decoration: none;
-        text-align: center;
-        color: #DEE2F0;
-        font-family: Times New Roman, serif;
-        font-size: 16px;
-        font-weight: bold;
 }
 
 /* Copyright locked to bottom */ 
@@ -171,6 +179,6 @@ footer div {
 
 footer div p, div h1 {
     padding-left: 1em;
-    font-family: Times New Roman, serif;
+    font-family: Arial, sans-serif;
     color: white;
 }
