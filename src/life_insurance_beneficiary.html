@@ -4,16 +4,27 @@
 	<title> Life Insurance Beneficiary </title>
 	
 	<link rel="stylesheet" type="text/css" href="../src/stylesheet.css">
-
-	<img class="logo" src="../files/img/logo.png">
-	<h1> New Employee Handbook > Life Insurance Beneficiary </h1>
+	
+	<div class="header_cheat" style="top: -5px">
+        <div id="logo_div" class="header_div">
+            <a href="../home.html"><img class="logo" src="../files/img/back.png"/></a>
+        </div>
+        <div id="title_div" class="header_div">
+            <p id="title"> Life Insurance Beneficiary </p>
+        </div>
+        <div id="button_div" class="header_div">
+            <button class="header_button" onclick="changeUnion()"> Change Union </button>
+        </div>
+		</div>	
+		<script>
+		function changeUnion() {
+                    window.location = "change_union_selection.html";
+                }
+		</script>
+	
 	</head>
 
 	<body>
-		<p> In order to prevent fraud, this document is only availiable in physical format. In the event you want to change your Life Insurance Beneficiary, please email <a href="mailto:benefits@uml.edu">benefits@uml.edu</a> to access the document you need. </p>
+		<p style="padding-top:155px; font-family:sans-serif;"> In order to prevent fraud, this document is only availiable in physical format. In the event you want to change your Life Insurance Beneficiary, please email <a href="mailto:benefits@uml.edu">benefits@uml.edu</a> to access the document you need. </p>
 	</body>
-
-	<footer>
-		<p> (c) 2016 Douglas Salvati </p>
-	</footer>
 </html>

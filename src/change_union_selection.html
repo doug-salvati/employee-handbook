@@ -46,7 +46,7 @@
         </div>
 
         <div style="position:absolute; top:155px;">
-            <p> Please enter your union now. </p>
+            <p style="font-family:sans-serif"> Please enter your union now. </p>
 
             <button onclick="setUnion('society_professors');"> The Massachusetts Society of Professors </button> <br />
             <button onclick="setUnion('teamsters');"> International Teamsters Union Local 25 </button> <br />
@@ -56,7 +56,9 @@
             <button onclick="setUnion('mta_grants');"> MTA Projects/Grants </button> <br />
             <button onclick="setUnion('uaw_grad');"> Local 1596 UAW </button> <br />
             <button onclick="setUnion('uaw_adjunct');"> Union of Adjunct Faculty, Local 1596, UAW] </button> <br />
-            <button onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br />
+            <button onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br /> <br />
+            <button onclick="localStorage.removeItem('union'); window.location = '../home.html';"> Reset App </button> <br />
+            <button onclick="setUnion('seiu');"> I don't know, I just want to test out the app. </button> <br />
         </div>
 		<script>
 		function setUnion(arg) {
@@ -67,8 +69,4 @@
         </script>
 
 	</body>
-
-	<footer>
-		<p> (c) 2016 Douglas Salvati </p>
-	</footer>
 </html>

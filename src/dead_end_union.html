@@ -3,17 +3,28 @@
 	<head>
 	<title> Resource Unavailable </title>
 	
+	<link rel="icon" type="image/x-icon" href="../files/img/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="../src/stylesheet.css">
 
-	<img class="logo" src="../files/img/logo.png">
-	<h1> New Employee Handbook > Resource Unavailable</h1>
+	<div class="header_cheat" style="top: -5px">
+        <div id="logo_div" class="header_div">
+            <a href="../home.html"><img class="logo" src="../files/img/back.png"/></a>
+        </div>
+        <div id="title_div" class="header_div">
+            <p id="title"> Resource Unavailable </p>
+        </div>
+        <div id="button_div" class="header_div">
+            <button class="header_button" onclick="changeUnion()"> Change Union </button>
+        </div>
+	</div>	
+	<script>
+		function changeUnion() {
+                    window.location = "change_union_selection.html";
+                }
+	</script>
 	</head>
 
 	<body>
-		<p> This information is not relevant to your union.  Please contact Human Resources with any concerns. </p>
+		<p style="padding-top:155px; font-family:sans-serif;"> This information is not relevant to your union.  Please contact Human Resources with any concerns. </p>
 	</body>
-
-	<footer>
-		<p> (c) 2016 Douglas Salvati </p>
-	</footer>
 </html>

@@ -3,14 +3,28 @@
 	<head>
 	<title> Select Your Union </title>
 
+	<link rel="icon" type="image/x-icon" href="../files/img/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="../src/stylesheet.css">
 
-	<img class="logo" src="../files/img/logo.png">
-	<h1> Welcome to the UMass Lowell New Employee Handbook</h1>
-	</head>
+	<div class="header_cheat" style="top: -5px">
+        <div id="logo_div" class="header_div">
+            <a href="../home.html"><img class="logo" src="../files/img/back.png"/></a>
+        </div>
+        <div id="title_div" class="header_div">
+            <p id="title"> Select Your Union </p>
+        </div>
+        <div id="button_div" class="header_div">
+            <button class="header_button" onclick="changeUnion()"> Change Union </button>
+        </div>
+	</div>	
+	<script>
+		function changeUnion() {
+                    window.location = "change_union_selection.html";
+                }
+	</script>
 
 	<body>
-		<p> Every new faculty member is assigned to a union. <br/>
+		<p style="padding-top:155px; font-family:sans-serif;"> Every new faculty member is assigned to a union. <br/>
 		Please indicate yours now. </br>
 		You can always change it if you make a mistake. </p>
 
@@ -22,7 +36,8 @@
 		<button onclick="setUnion('mta_grants');"> MTA Projects/Grants </button> <br/>
 		<button onclick="setUnion('uaw_grad');"> Local 1596 UAW </button> <br/>
 		<button onclick="setUnion('uaw_adjunct');"> Union of Adjunct Faculty, Local 1596, UAW] </button> <br/>
-		<button onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br/>
+		<button onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br/> <br />
+		<button onclick="setUnion('seiu');"> I don't know, I just want to test out the app. </button> <br />
 
 		<script>
 		function setUnion(arg) {
@@ -32,8 +47,4 @@
 		}
 		</script>
 	</body>
-	
-	<footer>
-		<p> (c) 2016 Douglas Salvati </p>
-	</footer>
 </html>

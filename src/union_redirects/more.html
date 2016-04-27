@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-	if (localStorage.union === "non_unit" || localStorage.union === "uaw_grad") {
-		window.location = "../dead_end_union.html";
-	
-	}
-	else {
-		window.location = "../../files/unions/" + localStorage.union + "/collective_bargaining.pdf";
-	}
+		<link rel="icon" type="image/x-icon" href="../../files/img/favicon.ico" />
+		<title> Vision </title>
+
+		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+		<div class="header_cheat" style="top: -5px">
+        <div id="logo_div" class="header_div">
+            <a href="../../home.html"><img class="logo" src="../../files/img/back.png"/></a>
+        </div>
+        <div id="title_div" class="header_div">
+            <p id="title"> Vision </p>
+        </div>
+        <div id="button_div" class="header_div">
+            <button class="header_button" onclick="changeUnion()"> Change Union </button>
+        </div>
+		</div>	
+		<script>
+		function changeUnion() {
+                    window.location = "../change_union_selection.html";
+                }
 	</script>
 </head>
+
+<body style="font-family:sans-serif; padding-top:155px">
+	<p> This is the last page I need to implement! </p>
+</body>	
+
 </html>

@@ -3,20 +3,31 @@
 	<head>
 	<title> MetLife </title>
 	
+	<link rel="icon" type="image/x-icon" href="../files/img/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="../src/stylesheet.css">
 
-	<img class="logo" src="../files/img/logo.png">
-	<h1> New Employee Handbook > Metlife Insurance </h1>
+	<div class="header_cheat" style="top: -5px">
+        <div id="logo_div" class="header_div">
+            <a href="../home.html"><img class="logo" src="../files/img/back.png"/></a>
+        </div>
+        <div id="title_div" class="header_div">
+            <p id="title"> MetLife Insurance </p>
+        </div>
+        <div id="button_div" class="header_div">
+            <button class="header_button" onclick="changeUnion()"> Change Union </button>
+        </div>
+	</div>	
+	<script>
+		function changeUnion() {
+                    window.location = "change_union_selection.html";
+                }
+	</script>
 	</head>
 
-	<body>
+	<body style="font-family:sans-serif; padding-top:155px">
 		<p><b>SPECIAL DISCOUNT PROGRAMS</b></p>
-		<p>Automobile & Homeowners Insurance All benefited employees are eligible for group discounts offered through MetLife® for automobile and homeowners insurance through payroll deduction. For more information contact MetLife http://www.metlife.com/mybenefits, or call 800-438-6381. (Company name: University of Massachusetts).</p>
-		<p>Group Legal Plan All benefited employees are eligible for the MetLife® Hyatt Legal Plan. This program offers representation for legal matters such as real estate, preparing wills and trusts and identity theft. Please call 800-821-6400 for more information.</p>
+		<p>Automobile & Homeowners Insurance All benefited employees are eligible for group discounts offered through MetLife(R) for automobile and homeowners insurance through payroll deduction. For more information contact MetLife http://www.metlife.com/mybenefits, or call 800-438-6381. (Company name: University of Massachusetts).</p>
+		<p>Group Legal Plan All benefited employees are eligible for the MetLife(R) Hyatt Legal Plan. This program offers representation for legal matters such as real estate, preparing wills and trusts and identity theft. Please call 800-821-6400 for more information.</p>
 
 	</body>
-
-	<footer>
-		<p> (c) 2016 Douglas Salvati </p>
-	</footer>
 </html>
