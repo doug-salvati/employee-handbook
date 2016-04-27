@@ -32,12 +32,27 @@
 	</head>
 
 	<body>
-		<p id="eyes"></p>
-
+		<div><p id="eyes" style="padding-top:155px;"></p></div>
 		<script>
-		var my_string = "Your dental provider is ";
-		my_string = my_string + 
-		document.getElementById("eyes").innerHTML = my_string;
+		var my_string = localStorage.getItem("union");
+		if (my_string === "mta_classified" || my_string === "mta_grants") {
+			my_string = "Your vision insurance provider is Davis Vision.\r\n";
+			my_string += "For information about this plan, visit www.MPEFund.org.";
+		}
+		else if (my_string === "mta_maintenance" || my_string === "teamsters") {
+			my_string = "Your vision insurance provider is Davis Vision.\r\n";
+			my_string += "For information about this plan, visit www.nage.org/state/benefits/optical-benefits.";
+		}
+		else if (my_string === "seiu") {
+			my_string = "Your vision insurance provider is Davis Vision.\r\n";
+			my_string += "For information about this plan, email your SEIU Unit Representative, Richard_Harvey@uml.edu.";
+		}
+		else {
+			my_string = "A Vision Discount Plan is made available to some UMass Lowell employees through arrangements\r\nwith the respective collective bargaining unit and for benefit-eligible employees that do not belong\r\nto a labor unit. A Vision Discount Plan is available for your unit!\r\n";
+			my_string += "\r\nYour vision discount provider is MetLife Insurance\r\n";
+			my_string += "For more information about this plan, email benefits@uml.edu."
+		}
+		document.getElementById("eyes").innerHTML = "<pre style=\"font-family:sans-serif;\">" + my_string + "</pre>";
 		</script>
 	</body>
 
