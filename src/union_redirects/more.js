@@ -13,6 +13,26 @@ function addLeader(name, role, email) {
     pelement.appendChild(para);
 }
 
+function viewPDF(document) {
+    document = "../files/unions/" + document;
+    localStorage.setItem("pdf", document);
+    window.location = "../pdf_viewer.html";
+}
+
+function addLink(name, href) {
+    var link = document.createElement("button");
+    var text = document.createTextNode(name);
+    link.setAttribute("class", "link");
+    link.setAttribute("onclick", "viewPDF(" + href + ")");
+    link.setAttribute("style", "display:inline");
+    link.onclick = function () {viewPDF(href);};
+    link.appendChild(text);
+    var element = document.getElementById("more");
+    element.appendChild(link);
+    var linebreak = document.createElement("br");
+    element.appendChild(linebreak);
+}
+
 function societyProfessors() {
     document.title = "Society of Professors";
     addLeader("Carol McDonough", "President", "Carol_McDonough@uml.edu");
@@ -21,12 +41,17 @@ function societyProfessors() {
     addLeader("Carol Barry", "Secretary", "Carol_Barry@uml.edu");
     addLeader("Arnold O'Brien", "Grievance Coordinator", "Arnold_OBrien@uml.edu");
     addLeader("Levon Chorbajian", "Health and Welfare Representative", "Levon_Chorbajian@uml.edu");
+    addLink("Salary Tables", "society_professors/salary_review.pdf");
+    addLink("Professional Development", "society_professors/prof_dev.pdf");
 }
 
 function teamsters() {
     document.title = "University Police";
     addLeader("Jeff Connors", "Steward", "Jeffrey_Connors@uml.edu");
     addLeader("Scott Childs", "Steward", "Scott_Childs@uml.edu");
+    addLink("Salary Tables", "teamsters/salary_tables.pdf");
+    addLink("Side Letter of Agreement", "teamsters/side_letter.pdf");
+    addLink("Sick Buyback Form", "teamsters/sick_buyback.pdf");
 }
 
 function seiu() {
@@ -36,12 +61,18 @@ function seiu() {
     addLeader("Penny Donoghue", "Chief Steward", "Pamela_Donoghue@uml.edu");
     addLeader("Ruairi O'Mahoney", "Treasurer", "Ruairi_OMahoney@uml.edu");
     addLeader("Susan Winning", "South Campus Area Representative", "Susan_Winning@uml.edu");
+    addLeader("Rick Harvey", "Dental/Vision Questions Contact", "Richard_Harvey@uml.edu");
+    addLink("Memos of Understanding", "seiu/memo_understanding.pdf");
+    addLink("Salary Tables", "seiu/salary_tables.pdf");
+    addLink("Sick Buyback Form", "seiu/sick_buyback.pdf");
 }
 
 function mtaClassified() {
     document.title = "Classified & Technical";
     addLeader("Christos Protonotarios", "President, Treasurer, & Secretary", "Christos_Protonotarios@uml.edu");
     addLeader("James Rossi", "Chief Steward", "James_Rossi@uml.edu");
+    addLink("Salary Tables", "mta_classified/salary_tables.pdf");
+    addLink("Sick Buyback Form", "mta_classified/sick_buyback.pdf");
 }
 
 function mtaMaintenance() {
@@ -52,6 +83,8 @@ function mtaMaintenance() {
     addLeader("David Maranda", "Chief Steward", "David_Maranda@uml.edu");
     addLeader("Sandra Timmons", "HK (North) Shop Steward", "Sandra_Timmons@uml.edu");
     addLeader("Steve Turcotte", "HK (South) Shop Steward", "Steve_Turcotte@uml.edu");
+    addLink("Salary Tables", "mta_maintenance/salary_tables.pdf");
+    addLink("Sick Buyback Form", "mta_maintenance/sick_buyback.pdf");
 }
 
 function mtaGrants() {
@@ -67,6 +100,8 @@ function mtaGrants() {
     addLeader("Sandy Sun", "Grace Area Representative", "Sandy_Sun@uml.edu");
     addLeader("Cindy Bent", "Grace Area Representative", "Cynthia_Bent@uml.edu");
     addLeader("Therese O'Donnell", "Grace Area Representative", "Therese_ODonnell@uml.edu");
+    addLink("Vacation Buyback Form", "mta_grants/vaca.pdf");
+    addLink("Sick Buyback Form", "mta_grants/sick_buyback.pdf");
 }
 
 function uawGrad() {
@@ -77,6 +112,8 @@ function uawGrad() {
     addLeader("Andrew Downey", "GEO Officer", "Andrew_Downey@uml.edu");
     addLeader("Yao Zhai", "GEO Steward", "Yao_Zhai@uml.edu");
     addLeader("Debbie White", "Coordinator of Graduate Programs", "Deborah_White@uml.edu");
+    addLink("Pay Scale", "uaw_grad/pay_scale.pdf");
+    addLink("GEO Contract", "uaw_grad/contract.pdf");
 }
 
 function uawAdjunct() {
@@ -84,11 +121,14 @@ function uawAdjunct() {
     addLeader("Ellen Martins", "President", "Ellen_MichaudMartins@uml.edu");
     addLeader("James Moran", "Vice President", "James_Moran@uml.edu");
     addLeader("Tess George", "Secretary & Communications Director", "Teresa_George@uml.edu");
+    addLink("Professional Development Guidelines", "uaw_adjunct/guidelines.pdf");
 }
 
 function nonUnit() {
     document.title = "Non-Unit Professionals";
     addLeader("Human Resources", "Main Contact", "HR@uml.edu");
+    addLink("Professional Personnel Policy", "non_unit/policy.pdf");
+    addLink("Salary Tables", "non_unit/salary_tables.pdf");
 }
 
 function getInfo() {
