@@ -59,7 +59,7 @@ function seiu() {
     addLeader("Nicholas Piscitello", "President", "Nicholas_Piscitello@uml.edu");
     addLeader("Justin Lawler", "Vice President", "Justin_Lawler@uml.edu");
     addLeader("Penny Donoghue", "Chief Steward", "Pamela_Donoghue@uml.edu");
-    addLeader("Ruairi O'Mahoney", "Treasurer", "Ruairi_OMahoney@uml.edu");
+    addLeader("Ruairi O'Mahony", "Treasurer", "Ruairi_OMahony@uml.edu");
     addLeader("Susan Winning", "South Campus Area Representative", "Susan_Winning@uml.edu");
     addLeader("Rick Harvey", "Dental/Vision Questions Contact", "Richard_Harvey@uml.edu");
     addLink("Memos of Understanding", "seiu/memo_understanding.pdf");
@@ -107,7 +107,7 @@ function mtaGrants() {
 function uawGrad() {
     document.title = "Local 1596 UAW";
     addLeader("Erin Mangan Sullivan", "Graduate Employee Organization (GEO) President", "Erin_Sullivan@uml.edu");
-    addLeader("John_Lamb", "GEO Vice President", "John_Lamb@uml.edu");
+    addLeader("John Lamb", "GEO Vice President", "John_Lamb@uml.edu");
     addLeader("Vikram Singh Prasher", "GEO Officer", "Vikramsingh_Prasher@uml.edu");
     addLeader("Andrew Downey", "GEO Officer", "Andrew_Downey@uml.edu");
     addLeader("Yao Zhai", "GEO Steward", "Yao_Zhai@uml.edu");
