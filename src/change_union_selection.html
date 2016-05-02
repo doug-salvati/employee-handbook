@@ -45,22 +45,20 @@
                 </div>
             </div>
         </div>
+        <p style="padding-top:155px; font-family:sans-serif; text-align:center"> Please enter your union now. </p>
 
-        <div style="position:absolute; top:155px;">
-            <p style="font-family:sans-serif"> Please enter your union now. </p>
-
-            <button onclick="setUnion('society_professors');"> The Massachusetts Society of Professors </button> <br />
-            <button onclick="setUnion('teamsters');"> International Teamsters Union Local 25 </button> <br />
-            <button onclick="setUnion('seiu');"> SEIU Local 888 </button> <br />
-            <button onclick="setUnion('mta_classified');"> MTA Classified/Technical </button> <br />
-            <button onclick="setUnion('mta_maintenance');"> MTA Maintenance/Trades </button> <br />
-            <button onclick="setUnion('mta_grants');"> MTA Projects/Grants </button> <br />
-            <button onclick="setUnion('uaw_grad');"> Local 1596 UAW </button> <br />
-            <button onclick="setUnion('uaw_adjunct');"> Union of Adjunct Faculty, Local 1596, UAW </button> <br />
-            <button onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br /> <br />
-            <button onclick="localStorage.removeItem('union'); window.location = '../home.html';"> Reset App </button> <br />
-            <button onclick="setUnion('seiu');"> I don't know, I just want to test out the app. </button> <br />
-        </div>
+        <button class="link" style="background:red" onclick="localStorage.removeItem('union'); window.location = '../home.html';"> Reset App </button> <br />
+        <button class="link" style="background:green"onclick="setUnion('seiu');"> I don't know, I just want to test out the app. </button> <br />
+            
+        <button class="link" onclick="setUnion('society_professors');"> The Massachusetts Society of Professors </button> <br />
+        <button class="link" onclick="setUnion('teamsters');"> International Teamsters Union Local 25 </button> <br />
+        <button class="link" onclick="setUnion('seiu');"> SEIU Local 888 </button> <br />
+        <button class="link" onclick="setUnion('mta_classified');"> MTA Classified/Technical </button> <br />
+        <button class="link" onclick="setUnion('mta_maintenance');"> MTA Maintenance/Trades </button> <br />
+        <button class="link" onclick="setUnion('mta_grants');"> MTA Projects/Grants </button> <br />
+        <button class="link" onclick="setUnion('uaw_grad');"> Local 1596 UAW </button> <br />
+        <button class="link" onclick="setUnion('uaw_adjunct');"> Union of Adjunct Faculty, Local 1596, UAW </button> <br />
+        <button class="link" onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br /> <br />
 		<script>
 		function setUnion(arg) {
 			localStorage.setItem("union", arg);

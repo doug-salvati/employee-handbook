@@ -24,20 +24,21 @@
 	</script>
 
 	<body>
-		<p style="padding-top:155px; font-family:sans-serif;"> Every new faculty member is assigned to a union. <br/>
+		<p style="padding-top:155px; font-family:sans-serif; text-align:center;"> Every new faculty member is assigned to a union. <br/>
 		Please indicate yours now. </br>
 		You can always change it if you make a mistake. </p>
 
-		<button onclick="setUnion('society_professors');"> The Massachusetts Society of Professors </button> <br/>
-		<button onclick="setUnion('teamsters');"> International Teamsters Union Local 25 </button> <br/>
-		<button onclick="setUnion('seiu');"> SEIU Local 888 </button> <br/>
-		<button onclick="setUnion('mta_classified');"> MTA Classified/Technical </button> <br/>
-		<button onclick="setUnion('mta_maintenance');"> MTA Maintenance/Trades </button> <br/>
-		<button onclick="setUnion('mta_grants');"> MTA Projects/Grants </button> <br/>
-		<button onclick="setUnion('uaw_grad');"> Local 1596 UAW </button> <br/>
-		<button onclick="setUnion('uaw_adjunct');"> Union of Adjunct Faculty, Local 1596, UAW </button> <br/>
-		<button onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br/> <br />
-		<button onclick="setUnion('seiu');"> I don't know, I just want to test out the app. </button> <br />
+		<button class="link" style="background:green" onclick="setUnion('seiu');"> I don't know, I just want to test out the app. </button> <br />
+		
+		<button class="link" onclick="setUnion('society_professors');"> The Massachusetts Society of Professors </button> <br/>
+		<button class="link" onclick="setUnion('teamsters');"> International Teamsters Union Local 25 </button> <br/>
+		<button class="link" onclick="setUnion('seiu');"> SEIU Local 888 </button> <br/>
+		<button class="link" onclick="setUnion('mta_classified');"> MTA Classified/Technical </button> <br/>
+		<button class="link" onclick="setUnion('mta_maintenance');"> MTA Maintenance/Trades </button> <br/>
+		<button class="link" onclick="setUnion('mta_grants');"> MTA Projects/Grants </button> <br/>
+		<button class="link" onclick="setUnion('uaw_grad');"> Local 1596 UAW </button> <br/>
+		<button class="link" onclick="setUnion('uaw_adjunct');"> Union of Adjunct Faculty, Local 1596, UAW </button> <br/>
+		<button class="link" onclick="setUnion('non_unit');"> Non-Unit Professionals </button> <br/> <br />
 
 		<script>
 		function setUnion(arg) {

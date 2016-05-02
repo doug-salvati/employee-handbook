@@ -15,7 +15,9 @@
             <img class="logo" src="./files/img/logo.png" />
         </div>
         <div id="title_div" class="header_div">
-            <p id="title"> New Employee Handbook </p>
+            <p id="title" style="text-align:center"> New Employee Handbook          
+                <button class="header_button" onclick="viewPDF('./files/start.pdf')"> Getting Started </button><br />
+            </p>
         </div>
         <div id="button_div" class="header_div">
             <button class="header_button" onclick="changeUnion()"> Change Union </button>
@@ -95,7 +97,7 @@
         <button class="link" onclick="window.location = './src/union_redirects/more.html'"> Leadership & More </button><br />
     </div>
     <div class="block_div right_div">
-        <h2 class="block_text block_title"> Flyers & Promotions </h2>
+        <h2 class="block_text block_title"> Flyers & Resources </h2>
 
         <p style="text-align: center"><img src="./files/img/flyers_logo.gif"/></p>
 
@@ -112,9 +114,11 @@
         <!--<button class="link" onclick="window.location = './src/dead_end.html'"> *Fraud Policy </button><br />-->
         <!--<button class="link" onclick="window.location = './src/dead_end.html'"> *Drug and Alcohol Policy </button><br />-->
         <button class="link" onclick="viewPDF('./files/flyers/dol/medical_leave.pdf')"> Medical Leave </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/map.pdf')"> Campus Map </button><br />
         <button class="link" onclick="viewPDF('./files/flyers/library.pdf')"> Library </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/rec_center.pdf')"> Campus Recreation </button><br />
         <button class="link" onclick="viewPDF('./files/flyers/holidays.pdf')"> Holidays </button><br />
-        <button class="link" onclick="window.location = './src/dead_end.html'"> *Right To Know Law </button><br />
+        <button class="link" onclick="viewPDF('./files/flyers/right_to_know.pdf')"> Right To Know Law </button><br />
     </div>
     <div class="block_div left_div">
         <h2 class="block_text block_title"> Retirement </h2>
