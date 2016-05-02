@@ -36,23 +36,37 @@
 		<p id="teeth" style="padding-top:155px;"></p>
 		<script>
 		var my_string = localStorage.getItem("union");
+		var my_link =  document.createElement("a");
 		if (my_string === "mta_classified" || my_string === "mta_grants" || my_string === "mta_maintenance") {
 			my_string = "Your dental insurance provider is the MPE fund.\r\n";
-			my_string += "For information about this plan, visit www.MPEFund.org.";
+			my_string += "For information about this plan, visit:";
+			my_link.setAttribute("href", "http://www.MPEFund.org");
+		    my_link.setAttribute("target", "_blank");
+			my_link.appendChild(document.createTextNode("MPEFund.org"));
 		}
 		else if (my_string === "society_professors" || my_string === "non_unit") {
 			my_string = "Your dental insurance provider is MetLife Insurance.\r\n";
-			my_string += "For information about this plan, email benefits@uml.edu.";
+			my_string += "For information about this plan, email:";
+			my_link.setAttribute("href", "mailto:benefits@uml.edu");
+			my_link.appendChild(document.createTextNode("benefits@uml.edu"));
 		}
 		else if (my_string = "seiu") {
 			my_string = "Your dental insurance provider is Delta Dental.\r\n";
-			my_string += "For information about this plan, email your SEIU Unit Representative, Richard_Harvey@uml.edu."
+			my_string += "For information about this plan, email your SEIU Unit Representative:";
+			my_link.setAttribute("href", "mailto:richard_harvey@uml.edu");
+			my_link.appendChild(document.createTextNode("Richard_Harvey@uml.edu"));
 		}
 		else {
 			my_string = "Your dental insurance provider is Delta Dental.\r\n";
-			my_string += "For information about this plan, email benefits@uml.edu.";
+			my_string += "For information about this plan, email:";
+			my_link.setAttribute("href", "mailto:benefits@uml.edu");
+			my_link.appendChild(document.createTextNode("benefits@uml.edu"));
 		}
-		document.getElementById("teeth").innerHTML = "<pre style=\"font-family:sans-serif;\">" + my_string + "</pre>";
+		var element = document.getElementById("teeth");
+		element.innerHTML = "<pre style=\"font-family:sans-serif;\">" + my_string + "</pre>";
+		my_link.setAttribute("class", "hyperlink");
+		element.appendChild(my_link);
+		
 		</script>
 	</body>
 </html>

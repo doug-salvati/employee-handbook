@@ -192,3 +192,14 @@ footer div p, div h1 {
         font-family: Arial, sans-serif;
         color: white;
 }
+
+/* Hyperlinks */
+.hyperlink {
+        font-family: sans-serif;
+        color: black;
+        text-decoration: underline;
+}
+
+.hyperlink:hover {
+        text-decoration: none;
+}

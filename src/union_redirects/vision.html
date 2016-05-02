@@ -33,27 +33,42 @@
 	</head>
 
 	<body>
-		<div><p id="eyes" style="padding-top:155px;"></p></div>
+		<p id="eyes" style="padding-top:155px;"></p>
 		<script>
-		var my_string = localStorage.getItem("union");
+		var my_string = localStorage.getItem("union");		
+		var my_link =  document.createElement("a");
 		if (my_string === "mta_classified" || my_string === "mta_grants") {
 			my_string = "Your vision insurance provider is Davis Vision.\r\n";
-			my_string += "For information about this plan, visit www.MPEFund.org.";
+			my_string += "For information about this plan, visit:";
+			my_link.setAttribute("href", "http://www.MPEFund.org");
+		    my_link.setAttribute("target", "_blank");
+			my_link.appendChild(document.createTextNode("MPEFund.org"));
 		}
 		else if (my_string === "mta_maintenance" || my_string === "teamsters") {
 			my_string = "Your vision insurance provider is Davis Vision.\r\n";
-			my_string += "For information about this plan, visit www.nage.org/state/benefits/optical-benefits.";
+			my_string += "For information about this plan, visit:";
+			my_link.setAttribute("href", "http://www.nage.org/state/benefits/optical-benefits");
+		    my_link.setAttribute("target", "_blank");
+			my_link.appendChild(document.createTextNode("NAGE.org"));
 		}
 		else if (my_string === "seiu") {
 			my_string = "Your vision insurance provider is Davis Vision.\r\n";
-			my_string += "For information about this plan, email your SEIU Unit Representative, Richard_Harvey@uml.edu.";
+			my_string += "For information about this plan, email your SEIU Unit Representative:";
+			my_link.setAttribute("href", "mailto:richard_harvey@uml.edu");
+			my_link.appendChild(document.createTextNode("Richard_Harvey@uml.edu"));
 		}
 		else {
 			my_string = "A Vision Discount Plan is made available to some UMass Lowell employees through arrangements\r\nwith the respective collective bargaining unit and for benefit-eligible employees that do not belong\r\nto a labor unit. A Vision Discount Plan is available for your unit!\r\n";
 			my_string += "\r\nYour vision discount provider is MetLife Insurance\r\n";
-			my_string += "For more information about this plan, email benefits@uml.edu."
+			my_string += "For information about this plan, email:";
+			my_link.setAttribute("href", "mailto:benefits@uml.edu");
+			my_link.appendChild(document.createTextNode("benefits@uml.edu"));
 		}
-		document.getElementById("eyes").innerHTML = "<pre style=\"font-family:sans-serif;\">" + my_string + "</pre>";
+		var element = document.getElementById("eyes");
+		element.innerHTML = "<pre style=\"font-family:sans-serif;\">" + my_string + "</pre>";
+		element.innerHTML = "<pre style=\"font-family:sans-serif;\">" + my_string + "</pre>";
+		my_link.setAttribute("class", "hyperlink");
+		element.appendChild(my_link);
 		</script>
 	</body>
 </html>

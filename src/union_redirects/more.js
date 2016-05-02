@@ -3,14 +3,22 @@ window.onload = getInfo()
 function addLeader(name, role, email) {
     var bold = document.createElement("b");
     var para = document.createElement("p");
-    var bnode = document.createTextNode(role + ":");
-    var pnode = document.createTextNode(name + "................(" + email + ")");
+    var a = document.createElement("a");
+    var linebreak = document.createElement("br");
+    a.setAttribute("href", "mailto:" + email);
+    a.setAttribute("class", "hyperlink");
+    para.setAttribute("style", "display:inline-block;");
+    var bnode = document.createTextNode(role + ": ");
+    var pnode = document.createTextNode(name + "---");
+    var anode = document.createTextNode("(" + email + ")");
     bold.appendChild(bnode);
     para.appendChild(pnode);
-    var belement = document.getElementById("leadership");
-    var pelement = document.getElementById("leadership");
-    belement.appendChild(bold);
-    pelement.appendChild(para);
+    a.appendChild(anode);
+    var element = document.getElementById("leadership");
+    element.appendChild(bold);
+    element.appendChild(para);
+    element.appendChild(a);
+    element.appendChild(linebreak);
 }
 
 function viewPDF(document) {
@@ -62,7 +70,7 @@ function seiu() {
     addLeader("Ruairi O'Mahony", "Treasurer", "Ruairi_OMahony@uml.edu");
     addLeader("Susan Winning", "South Campus Area Representative", "Susan_Winning@uml.edu");
     addLeader("Rick Harvey", "Dental/Vision Questions Contact", "Richard_Harvey@uml.edu");
-    addLink("Memos of Understanding", "seiu/memo_understanding.pdf");
+    addLink("Memorandum of Understanding", "seiu/memo_understanding.pdf");
     addLink("Salary Tables", "seiu/salary_tables.pdf");
     addLink("Sick Buyback Form", "seiu/sick_buyback.pdf");
 }
@@ -89,11 +97,11 @@ function mtaMaintenance() {
 
 function mtaGrants() {
     document.title = "Grants & Contracts";
-    addLeader("Scott Fulmer", "President", "Kitson Hall | (978) 934-4854 | Scott_Fulmer@uml.edu");
-    addLeader("Shanna Thomson", "Vice President", "O'Leary Library | (978) 934-4641 | Shanna_Thomson@uml.edu");
-    addLeader("Lynne Schaufenbil", "Recording Secretary", "Wannalancit Mills | Lynne_Schaufenbil@uml.edu");
-    addLeader("Rebecca Gore", "Membership Secretary", "Kitson Hall | (978) 934-3276 | Rebecca_Gore@uml.edu");
-    addLeader("Thomas Estabrook", "Grievance Secretary", "Wannalancit Mills | (978) 934-3397 | Thomas_Estabrook@uml.edu");
+    addLeader("Scott Fulmer", "President", "Scott_Fulmer@uml.edu");
+    addLeader("Shanna Thomson", "Vice President", "Shanna_Thomson@uml.edu");
+    addLeader("Lynne Schaufenbil", "Recording Secretary", "Lynne_Schaufenbil@uml.edu");
+    addLeader("Rebecca Gore", "Membership Secretary", "Rebecca_Gore@uml.edu");
+    addLeader("Thomas Estabrook", "Grievance Secretary", "Thomas_Estabrook@uml.edu");
     addLeader("Mary Fadden", "Grace Area Representative", "Mary_Fadden@uml.edu");
     addLeader("Lois Heath", "Grace Area Representative", "Lois_Heath@uml.edu");
     addLeader("Phyllis Procter", "Grace Area Representative", "Phyllis_Procter@uml.edu");
