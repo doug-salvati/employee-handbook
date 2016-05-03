@@ -44,8 +44,7 @@ body {
 }
 
 .logo_small {
-	height: 65px;
-	width: auto;
+	height: 50%;
         min-width: 80px;
         margin-top: 20px;
         margin-left: 40px;
